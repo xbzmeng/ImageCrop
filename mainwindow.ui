@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>401</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Image Slice</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="openAction"/>
+   <addaction name="resizeAction"/>
+   <addaction name="cropAction"/>
+   <addaction name="sliceAction"/>
+   <addaction name="quitAction"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>621</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="openAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/open.png</normaloff>
+     <normalon>:/images/open.png</normalon>:/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open New Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="sliceAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/slice.png</normaloff>
+     <normalon>:/images/slice.png</normalon>:/slice.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Slice</string>
+   </property>
+   <property name="toolTip">
+    <string>Image Slice</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="cropAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/crop.png</normaloff>
+     <normalon>:/images/crop.png</normalon>:/crop.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Crop</string>
+   </property>
+   <property name="toolTip">
+    <string>Crop Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="quitAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/quit.png</normaloff>
+     <normalon>:/images/quit.png</normalon>:/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Quit Full Screen</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="resizeAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/resize.png</normaloff>
+     <normalon>:/images/resize.png</normalon>:/resize.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Resize</string>
+   </property>
+   <property name="toolTip">
+    <string>Resize Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
